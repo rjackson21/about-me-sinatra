@@ -1,9 +1,7 @@
 # Ruby On Sinatra Starter Project
-A starter project for Ruby On Sinatra for beginner developers
-
+This is my website
 ## Purpose
-The purpose of this is to simplify development environment for developers and programmers to make web applications with Ruby on Sinatra.
-It is also a good learning tool for developers and programmers who want to learn or switch to Ruby on Sinatra.
+The purpose of this is to practice developing web apps using Sinatra & Ruby.
 
 ---
 ## Gems Used
