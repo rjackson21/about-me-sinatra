@@ -1,8 +1,7 @@
 require 'sinatra'
-require 'sinatra/reloader' if development? # Learn more about the reloader at sinatrarb.com
-require 'sinatra/multi_route'
-
-# Uncomment the line's =begin and =end to use this example route
+require 'genius'
+#require 'sinatra/reloader' if development? # Learn more about the reloader at sinatrarb.com
+#require 'sinatra/multi_route'
 =begin
 get '/example' do
   "This is an example
@@ -11,15 +10,21 @@ get '/example' do
   </form>" 
 end
 
-# Multi-Line comment, learn more about it in ruby-lang.org
 post '/example' do
   "<h1>POSTED</h1>
   <a href='/'>Click to go back home</a>"
 end
 =end
 
-# Learn more about multi-routing at sinatrarb.com
-get '/', '/home' do
+
+
+get '/' do
+  Genius.access_token = 'uiIUcF6fqotNWzjONln1077y7jPrnDq46kzwd4ChUZ5_PexdAgSsVGFzoMCOZYi8'
+  songs = Genius::Song.search("The Hills")
+  erb :home, locals: {songs: songs}
+end
+
+get '/home' do
   erb :home
 end
 
