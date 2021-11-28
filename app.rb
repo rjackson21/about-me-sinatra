@@ -34,6 +34,10 @@ get '/contact' do
   erb :contact
 end
 
+get '/search' do
+  erb :search
+end
+
 get '/search/:song_title' do
   "Searching for #{params['song_title']}!"
   Genius.access_token = 'uiIUcF6fqotNWzjONln1077y7jPrnDq46kzwd4ChUZ5_PexdAgSsVGFzoMCOZYi8'
