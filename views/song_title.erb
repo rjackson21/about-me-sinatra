@@ -1,6 +1,18 @@
-<% songs.each do |song| %>
-    <li>
-        <%= song.title %>
-    </li>
+<table class="table table-striped">
+    <tr>
+        <% ['Song Title', 'Artist'].each do |header| %>
+        <th><%= header %></th>
+        <% end %>
+    </tr>
+    <% songs.each do |row| %>
+    <tr>
+        <td><%= row.title %></td>
+        <td><%= row.primary_artist.name%></td>
+
+    </tr>
     <% end %>
-</ul>
+</table>
+
+
+
+
